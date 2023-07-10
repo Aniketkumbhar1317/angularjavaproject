@@ -1,0 +1,14 @@
+.container{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(118, 222, 213);
+}
+table{
+    margin: auto;
+}
+table td tr{
+    
+    padding: 5px;
+    font-size: 25px;
+}

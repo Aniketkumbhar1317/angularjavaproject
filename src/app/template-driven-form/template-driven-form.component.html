@@ -1,0 +1,55 @@
+<div class="container">
+<h2>Registration Form</h2>
+    <form #userForm="ngForm" (ngSubmit)="formSubmitted(userForm)">
+     
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" placeholder="enter your name here..." name="name" ngModel  [(ngModel)]="user.name"></td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" placeholder="enter your email here..." name="email" ngModel [(ngModel)]="user.email"></td>
+            </tr>
+
+            <tr>
+                <td>About:</td>
+                <td><input type="text" placeholder="enter about here..." name="about" ngModel [(ngModel)]="user.about"></td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" name="gender" ngModel value="male" [(ngModel)]="user.gender">male
+                <input type="radio" name="gender" ngModel value="female" [(ngModel)]="user.gender">female</td>
+            </tr>
+
+            <tr>
+                <td>City</td>
+                <td>
+                    <select name="city" ngModel [(ngModel)]="user.city">
+                        <option value="Lucknow">Lucknow</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kanpur">Kanpur</option>
+                        <option value="Varanasi">varanasi</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr> 
+                
+                <td colspan="2" >
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear</button>
+                </td>
+                </tr>
+        </table>
+
+        <h2>form details:</h2> 
+        <p>Value: {{ userForm.value| json }}</p>
+        <p>Value: {{ userForm.dirty}}</p>
+        <p>Value: {{ userForm.valid}}</p>
+
+</form>
+
+</div>
